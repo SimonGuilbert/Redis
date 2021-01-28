@@ -81,10 +81,12 @@ const connectDb = async () => {
 //Accessing the routes
 const userRoutes = require('./routes/user');
 const connexionRoutes = require('./routes/connexion');
+const accessRoutes = require('./routes/service');
 
 //Acces the routes
 app.use('/api/v1/', userRoutes);
 app.use('/api/v1/', connexionRoutes);
+app.use('/api/v1/', accessRoutes);
 
 //When there is no route that caught the incoming request
 //use the 404 middleware
