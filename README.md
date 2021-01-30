@@ -11,4 +11,4 @@ Routes :
   * email
   * password
 * Accéder au service : http://localhost:3000/api/v1/accessService
- * Bearer + token obtenu au moment de la connexion
+  * Bearer + token obtenu au moment de la connexion
