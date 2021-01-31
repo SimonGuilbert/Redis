@@ -136,11 +136,11 @@ function accessService(req, res) {
             if (reply == null){
                 client.set('nb_connexions', 1);
                 client.expire('nb_connexions', 10);
-                res.json("Bienvenue : vous pouvez accéder au service. Nombre de personnes connectées : 1");
+                res.json("Bienvenue ! Vous pouvez maintenant accéder à la ressource 'numéro de téléphone de Emmanuel Macron' : 0635274865. Nombre de personnes connectées : 1");
             } else if (parseInt(reply) < 10) {
                 client.incr('nb_connexions')
                 const newNB = parseInt(reply)+1;
-                res.json("Bienvenue : vous pouvez accéder au service. Nombre de personnes connectées : "+newNB);
+                res.json("Bienvenue ! Vous pouvez maintenant accéder à la ressource 'numéro de téléphone de Emmanuel Macron' : 0635274865. Nombre de personnes connectées : "+newNB);
             } else {
                 res.json("Désolé, notre serveur est surchargé. Réessayez dans quelques secondes")
             }
